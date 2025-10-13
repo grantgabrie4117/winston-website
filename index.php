@@ -34,8 +34,8 @@
         </main>
 
         <aside>
-            <!--<h3>Sidebar</h3> -->
-            <!--<p>This is the sidebar. You can place links, ads, or secondary information here.</p> -->
+            <h3>This is Winston</h3> 
+            <img href=images/winston.png alt="winston.png">
         </aside>
     </div>
 
