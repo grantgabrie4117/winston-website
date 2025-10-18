@@ -19,13 +19,16 @@ body {
 header {
     background-image: url("images/palmTreebanner.png");
     /*background-color: #6bc9ff; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: not-repeat;
     color: #fff;
     padding: 1rem 0;
     text-align: left;
 }
 
 nav {
-    background: #e5ff71;
+    background: #b2bd81;
     padding: 0.5rem;
 }
 
