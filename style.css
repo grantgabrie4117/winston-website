@@ -17,7 +17,8 @@ body {
 
 /* --- Header & Navigation --- */
 header {
-    background-color: #6bc9ff;
+    background-image: url("images/palmTreeBanner.png");
+    /*background-color: #6bc9ff; */
     color: #fff;
     padding: 1rem 0;
     text-align: left;
