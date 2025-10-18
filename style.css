@@ -17,10 +17,10 @@ body {
 
 /* --- Header & Navigation --- */
 header {
-    background-color: #333;
+    background-color: #6bc9ff;
     color: #fff;
     padding: 1rem 0;
-    text-align: center;
+    text-align: left;
 }
 
 nav {
