@@ -23,11 +23,12 @@ header {
     background-position: center;
     background-repeat: not-repeat;
     color: #fff;
-    padding: 1rem 0;
+    /*padding: 1rem 0; */
     text-align: left;
 }
 
-nav {
+/*nav {
+
     background: #b2bd81;
     padding: 0.5rem;
 }
@@ -47,6 +48,8 @@ nav a {
     color: #fff;
     text-decoration: none;
 }
+*/
+
 
 /* --- Main Content & Sidebar Layout --- */
 .container {
