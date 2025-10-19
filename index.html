@@ -10,13 +10,23 @@
 
     <header>
         <h1>Grant's first website :D</h1>
-        <p>Tyler is gay</p>
+
+            <button class="button-2" role="button">
+            <span class="text">Home</span>
+            </button>
+
+            <button class="button-2" role="button">
+            <span class="text">Conan Game</span>
+            </button>
+
+            <button class="button-2" role="button">
+            <span class="text">Cursors</span>
+            </button>   
     </header>
 
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Server map</a></li>
+            
             
         </ul>
     </nav>
@@ -24,8 +34,8 @@
     <div class="container">
         <main>
             <article>
-                <h2>Winston</h2>
-                <p>This is where I talk about Winston</p>
+                <h2>Main Page</h2>
+                <p>Join the minecraft server at play.grantsco4117.net </p>
             </article>
             <section>
                 <h3>server map</h3>
@@ -36,8 +46,21 @@
         </main>
 
         <aside>
-            <h3>This is Winston</h3> 
-            <img src="images/winston.png" alt="winston.png">
+            <h3>Advertisement</h3> 
+            <img id="banner" alt="Random Ad" style="width:100%; height:auto;">
+
+
+            <script>
+  // Set how many images you have
+  const adCount = 50; // change this number to match how many AD#.jpeg files you have
+
+  // Pick a random image number
+  const randomAd = Math.floor(Math.random() * adCount) + 1;
+
+  // Build the image path
+  document.getElementById("banner").src = `2000sAds/AD (${randomAd}).jpg`;
+</script>
+
         </aside>
     </div>
 
