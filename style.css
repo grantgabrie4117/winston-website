@@ -4,6 +4,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-size: cover;
     background-image: url("images/water_59.png");
     background-color: #c1f3fa;
     color: #333;
@@ -21,7 +22,7 @@ header {
     background-image: url("images/water_60.png");
     /*background-color: #6bc9ff; */
     background-size: cover;
-    background-position: 0px 1150px;
+    background-position: 0px 920vh;
     background-repeat: repeat;
     color: #fff;
     padding: 70px; 
