@@ -21,33 +21,51 @@ body {
 header {
     background-image: url("images/water_60.png");
     /*background-color: #6bc9ff; */
+    
+    
+    aspect-ratio: 16 / 2;
+    position: relative;
+    padding-top: 20%;
     background-size: cover;
-    background-position: 0px 920vh;
+    background-position: center 13%;
     background-repeat: repeat;
-    color: #fff;
-    padding: 70px; 
+    color: #fff; /*text color */
+    padding: 50px; 
     text-align: center;
+    overflow: hidden;
 }
-
-nav {
-    padding: 0rem;
+.header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Perfectly centers the content */
+  text-align: center;
+  width: 100%;
 }
-
-nav ul {
-    padding: 10;
-    list-style: none;
-    text-align: left;
-}
-
-
 
 
 
 /* --- Main Content & Sidebar Layout --- */
 .container {
     display: flex;
-    gap: 20px; /* Space between main and aside */
+    gap: 0 20px; /* Space between main and aside */
     margin-top: 20px;
+}
+
+
+
+aside.sidebar {
+  background: #c1f3fa;
+  padding: 10px;
+  border-radius: 15px;
+  
+}
+
+aside.left {
+  flex: 1;
+  order: 0;
+  background: #c1f3fa;
+  
 }
 
 main {
@@ -56,12 +74,13 @@ main {
     padding: 20px;
     border-radius: 15px;
 }
-
-aside {
+aside.right {
     flex: 1; /* Takes up 1/4 of the space */
     background: #c1f3fa;
     padding: 10px;
     border-radius: 15px;
+    order: 2;
+    
 }
 
 /* --- Footer --- */

@@ -9,70 +9,76 @@
 <body>
 
     <header>
-        <h1>Grant's first website :D</h1>
+        <div class="header-content">
+        <h1>Welcome to grantsco4117.net :D</h1>
 
             <button class="button-2" role="button">
             <span class="text">Home</span>
             </button>
 
             <a href="/Conan/index.html">
-            <button class="button-2" role="button" >
+            <button class="button-2" role="button">
             <span class="text">Conan Game</span>
             </button>
             </a>
 
             <a href="/Overwatch-BGSU-Stats.html">
-            <button class="button-2" role="button" >
+            <button class="button-2" role="button">
             <span class="text">Overwatch Stats</span>
             </button>
             </a>
 
             <!--<button class="button-2" role="button">
             <span class="text">Cursors</span>
-            </button>   -
+            </button>   
             !-->
+        </div>
     </header>
-
-    <nav>
-        <ul>
-            
-            
-        </ul>
-    </nav>
 
     <div class="container">
         <main>
             <article>
                 <h2>Main Page</h2>
-                <p> Visit the new public hub and feel free to add onto main street to build new building, shops, or anything else that might look cool! Visit the public hub with /warp phub </p>
-                <p> The name of the Publichub is credited to Savannah "Reinfardt" Clouse</p>
+                <p> Here is the download link to the new minecraft modpack. Using curseforge you can import the .zip file and start playing at play.grantsco4117.net </p>
+            <a href="Minecraft Mod Pack -1.0.zip">
+            <button class="button-2" role="button">
+            <span class="text">Download</span>
+            </button>
+            </a>
+                
             </article>
             <section>
-                <h3>server map</h3>
+                <h3>Server Map</h3>
                 <iframe src="http://66.61.50.207:1111" width="100%" height="600px" style="border:none;"></iframe>
-                
-                <img src="images/ezgif-6d5f252eb87224 (1).gif">
-                
+    <div>
+
             </section>
+        
         </main>
 
-        <aside>
+        <aside class="sidebar right">
+            <h2> play.grantsco4117.net</h2>
+                <div id="mc-status">
+                    <p>Status: <span id="status">Loading...</span></p>
+                    <p>Players: <span id="players">-</span></p>
+                <ul id="player-list"></ul>
+                </div>
             <h3>Advertisement</h3> 
             <img id="banner" alt="Random Ad" style="width:100%; height:auto;">
+            
+    <script>
+    // Set how many images
+        const adCount = 56; 
 
+    // Pick a random image number
+        const randomAd = Math.floor(Math.random() * adCount) + 1;
 
-            <script>
-  // Set how many images you have
-  const adCount = 56; // change this number to match how many AD#.jpeg files you have
-
-  // Pick a random image number
-  const randomAd = Math.floor(Math.random() * adCount) + 1;
-
-  // Build the image path
-  document.getElementById("banner").src = `2000sAds/AD (${randomAd}).jpg`;
-</script>
+    // Build the image path
+        document.getElementById("banner").src = `2000sAds/AD (${randomAd}).jpg`;
+    </script>
 
         </aside>
+    
     </div>
 
     <footer>
@@ -80,5 +86,33 @@
     </footer>
 
 </body>
+ 
+<script>
+fetch("https://api.mcsrvstat.us/2/play.grantsco4117.net")
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById("status").textContent =
+      data.online ? "Online" : "Offline";
+
+    if (data.online) {
+      document.getElementById("players").textContent =
+        `${data.players.online} / ${data.players.max}`;
+
+      if (data.players.list) {
+        const list = document.getElementById("player-list");
+        data.players.list.forEach(player => {
+          const li = document.createElement("li");
+          li.textContent = player;
+          list.appendChild(li);
+        });
+      }
+    }
+  });
+
+
+</script>
+
+
+
 
 </html>
